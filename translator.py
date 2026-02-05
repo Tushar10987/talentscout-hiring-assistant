@@ -1,0 +1,148 @@
+from config import Config
+
+class Translator:
+    
+    TRANSLATIONS = {
+        "en": {
+            "greeting": "Welcome to TalentScout Hiring Assistant.",
+            "intro": "I will help you with the initial technical screening process. This will take approximately 5 minutes.",
+            "start_button": "Start Screening",
+            "next_button": "Next",
+            "confirm_button": "Confirm & Continue",
+            "name_prompt": "What is your full name?",
+            "email_prompt": "What is your email address?",
+            "phone_prompt": "What is your phone number?",
+            "experience_prompt": "How many years of professional experience do you have?",
+            "position_prompt": "What position are you applying for?",
+            "location_prompt": "What is your current location?",
+            "tech_stack_prompt": "Please list your tech stack (comma-separated). Example: Python, React, PostgreSQL",
+            "confirm_details": "Please confirm your details",
+            "generating": "Generating Your Assessment",
+            "screening_complete": "Screening Complete!",
+            "ai_assessment": "AI-Generated Technical Assessment",
+            "thank_you": "Thank you for completing the screening!",
+            "error_name": "Please enter a valid name",
+            "error_email": "Please enter a valid email address",
+            "error_phone": "Please enter a valid phone number",
+            "error_position": "Please enter a position",
+            "error_location": "Please enter a location",
+            "error_tech": "Please enter your tech stack",
+            "sentiment_label": "Sentiment Analysis",
+            "candidate_snapshot": "Candidate Snapshot"
+        },
+        "hi": {
+            "greeting": "टैलेंटस्काउट हायरिंग असिस्टेंट में आपका स्वागत है।",
+            "intro": "मैं प्रारंभिक तकनीकी स्क्रीनिंग प्रक्रिया में आपकी मदद करूंगा। इसमें लगभग 5 मिनट लगेंगे।",
+            "start_button": "स्क्रीनिंग शुरू करें",
+            "next_button": "अगला",
+            "confirm_button": "पुष्टि करें और जारी रखें",
+            "name_prompt": "आपका पूरा नाम क्या है?",
+            "email_prompt": "आपका ईमेल पता क्या है?",
+            "phone_prompt": "आपका फोन नंबर क्या है?",
+            "experience_prompt": "आपके पास कितने वर्षों का पेशेवर अनुभव है?",
+            "position_prompt": "आप किस पद के लिए आवेदन कर रहे हैं?",
+            "location_prompt": "आपका वर्तमान स्थान क्या है?",
+            "tech_stack_prompt": "कृपया अपना टेक स्टैक सूचीबद्ध करें (अल्पविराम से अलग)",
+            "confirm_details": "कृपया अपने विवरण की पुष्टि करें",
+            "generating": "आपका मूल्यांकन तैयार किया जा रहा है",
+            "screening_complete": "स्क्रीनिंग पूर्ण!",
+            "ai_assessment": "AI-जनित तकनीकी मूल्यांकन",
+            "thank_you": "स्क्रीनिंग पूरी करने के लिए धन्यवाद!",
+            "error_name": "कृपया एक मान्य नाम दर्ज करें",
+            "error_email": "कृपया एक मान्य ईमेल पता दर्ज करें",
+            "error_phone": "कृपया एक मान्य फोन नंबर दर्ज करें",
+            "error_position": "कृपया एक पद दर्ज करें",
+            "error_location": "कृपया एक स्थान दर्ज करें",
+            "error_tech": "कृपया अपना टेक स्टैक दर्ज करें"
+        },
+        "es": {
+            "greeting": "Bienvenido al Asistente de Contratación TalentScout.",
+            "intro": "Le ayudaré con el proceso inicial de selección técnica. Esto tomará aproximadamente 5 minutos.",
+            "start_button": "Iniciar Selección",
+            "next_button": "Siguiente",
+            "confirm_button": "Confirmar y Continuar",
+            "name_prompt": "¿Cuál es su nombre completo?",
+            "email_prompt": "¿Cuál es su dirección de correo electrónico?",
+            "phone_prompt": "¿Cuál es su número de teléfono?",
+            "experience_prompt": "¿Cuántos años de experiencia profesional tiene?",
+            "position_prompt": "¿A qué puesto está aplicando?",
+            "location_prompt": "¿Cuál es su ubicación actual?",
+            "tech_stack_prompt": "Por favor liste su stack tecnológico (separado por comas). Ejemplo: Python, React, PostgreSQL",
+            "confirm_details": "Por favor confirme sus detalles",
+            "generating": "Generando su Evaluación",
+            "screening_complete": "¡Selección Completa!",
+            "ai_assessment": "Evaluación Técnica Generada por IA",
+            "thank_you": "¡Gracias por completar la selección!",
+            "error_name": "Por favor ingrese un nombre válido",
+            "error_email": "Por favor ingrese una dirección de correo válida",
+            "error_phone": "Por favor ingrese un número de teléfono válido",
+            "error_position": "Por favor ingrese un puesto",
+            "error_location": "Por favor ingrese una ubicación",
+            "error_tech": "Por favor ingrese su stack tecnológico"
+        },
+        "fr": {
+            "greeting": "Bienvenue à l'Assistant de Recrutement TalentScout.",
+            "intro": "Je vous aiderai avec le processus initial de sélection technique. Cela prendra environ 5 minutes.",
+            "start_button": "Commencer la Sélection",
+            "next_button": "Suivant",
+            "confirm_button": "Confirmer et Continuer",
+            "name_prompt": "Quel est votre nom complet?",
+            "email_prompt": "Quelle est votre adresse e-mail?",
+            "phone_prompt": "Quel est votre numéro de téléphone?",
+            "experience_prompt": "Combien d'années d'expérience professionnelle avez-vous?",
+            "position_prompt": "Pour quel poste postulez-vous?",
+            "location_prompt": "Quelle est votre localisation actuelle?",
+            "tech_stack_prompt": "Veuillez lister votre stack technique (séparé par des virgules). Exemple: Python, React, PostgreSQL",
+            "confirm_details": "Veuillez confirmer vos détails",
+            "generating": "Génération de votre Évaluation",
+            "screening_complete": "Sélection Terminée!",
+            "ai_assessment": "Évaluation Technique Générée par IA",
+            "thank_you": "Merci d'avoir complété la sélection!",
+            "error_name": "Veuillez entrer un nom valide",
+            "error_email": "Veuillez entrer une adresse e-mail valide",
+            "error_phone": "Veuillez entrer un numéro de téléphone valide",
+            "error_position": "Veuillez entrer un poste",
+            "error_location": "Veuillez entrer une localisation",
+            "error_tech": "Veuillez entrer votre stack technique"
+        },
+        "de": {
+            "greeting": "Willkommen beim TalentScout Einstellungsassistenten.",
+            "intro": "Ich werde Ihnen beim ersten technischen Auswahlverfahren helfen. Dies dauert etwa 5 Minuten.",
+            "start_button": "Auswahl Starten",
+            "next_button": "Weiter",
+            "confirm_button": "Bestätigen und Fortfahren",
+            "name_prompt": "Wie ist Ihr vollständiger Name?",
+            "email_prompt": "Wie lautet Ihre E-Mail-Adresse?",
+            "phone_prompt": "Wie lautet Ihre Telefonnummer?",
+            "experience_prompt": "Wie viele Jahre Berufserfahrung haben Sie?",
+            "position_prompt": "Für welche Position bewerben Sie sich?",
+            "location_prompt": "Was ist Ihr aktueller Standort?",
+            "tech_stack_prompt": "Bitte listen Sie Ihren Tech-Stack auf (durch Kommas getrennt). Beispiel: Python, React, PostgreSQL",
+            "confirm_details": "Bitte bestätigen Sie Ihre Angaben",
+            "generating": "Ihre Bewertung wird erstellt",
+            "screening_complete": "Auswahl Abgeschlossen!",
+            "ai_assessment": "KI-generierte Technische Bewertung",
+            "thank_you": "Vielen Dank für das Abschließen der Auswahl!",
+            "error_name": "Bitte geben Sie einen gültigen Namen ein",
+            "error_email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+            "error_phone": "Bitte geben Sie eine gültige Telefonnummer ein",
+            "error_position": "Bitte geben Sie eine Position ein",
+            "error_location": "Bitte geben Sie einen Standort ein",
+            "error_tech": "Bitte geben Sie Ihren Tech-Stack ein"
+        }
+    }
+    
+    @classmethod
+    def get_text(cls, key: str, language: str = "en") -> str:
+        return cls.TRANSLATIONS.get(language, cls.TRANSLATIONS["en"]).get(key, key)
+    
+    @classmethod
+    def get_language_instruction(cls, language: str) -> str:
+        instructions = {
+            "en": "Provide all questions and content in English.",
+            "hi": "सभी प्रश्न और सामग्री हिंदी में प्रदान करें।",
+            "es": "Proporcione todas las preguntas y contenido en español.",
+            "fr": "Fournissez toutes les questions et le contenu en français.",
+            "de": "Stellen Sie alle Fragen und Inhalte auf Deutsch bereit."
+        }
+        return instructions.get(language, instructions["en"])

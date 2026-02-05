@@ -1,0 +1,170 @@
+/* TalentScout Hiring Assistant - Professional Dark Theme */
+
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+.stApp {
+    background-color: #1a1a2e;
+    color: #eaeaea;
+}
+
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 800px;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+h2,
+h3 {
+    color: #f0f0f0;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+p,
+div,
+span {
+    color: #d0d0d0;
+}
+
+strong {
+    color: #ffffff;
+}
+
+input,
+textarea,
+select {
+    background-color: #16213e !important;
+    border: 1px solid #0f3460 !important;
+    border-radius: 6px !important;
+    color: #eaeaea !important;
+    padding: 0.6rem !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #00adb5 !important;
+    box-shadow: 0 0 0 2px rgba(0, 173, 181, 0.2) !important;
+}
+
+.stButton>button {
+    background-color: #00adb5 !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 0.65rem 1.5rem !important;
+    font-weight: 500 !important;
+    transition: all 0.2s !important;
+}
+
+.stButton>button:hover {
+    background-color: #00939a !important;
+    transform: translateY(-1px);
+}
+
+.stDownloadButton>button {
+    background-color: #00adb5 !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 0.65rem 1.5rem !important;
+}
+
+.stDownloadButton>button:hover {
+    background-color: #00939a !important;
+}
+
+div[data-baseweb="select"] {
+    background-color: #16213e !important;
+    border: 1px solid #0f3460 !important;
+    border-radius: 6px !important;
+}
+
+.stProgress>div>div {
+    background-color: #00adb5 !important;
+    border-radius: 10px !important;
+}
+
+div[data-testid="stMetricValue"] {
+    color: #00adb5 !important;
+    font-size: 1.5rem !important;
+}
+
+div[data-testid="stMetricLabel"] {
+    color: #a0a0a0 !important;
+}
+
+.stSuccess {
+    background-color: rgba(0, 173, 181, 0.15) !important;
+    border-left: 4px solid #00adb5 !important;
+    color: #7fffd4 !important;
+    padding: 0.75rem !important;
+    border-radius: 6px !important;
+}
+
+.stError {
+    background-color: rgba(239, 68, 68, 0.15) !important;
+    border-left: 4px solid #ef4444 !important;
+    color: #fca5a5 !important;
+    padding: 0.75rem !important;
+    border-radius: 6px !important;
+}
+
+.stInfo {
+    background-color: rgba(0, 173, 181, 0.1) !important;
+    border-left: 4px solid #00adb5 !important;
+    color: #93e9ed !important;
+    padding: 0.75rem !important;
+    border-radius: 6px !important;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #0f3460;
+    margin: 1.5rem 0;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #16213e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0f3460;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00adb5;
+}
+
+@media (max-width: 768px) {
+    .block-container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
