@@ -71,7 +71,7 @@ TalentScout Hiring Assistant is an intelligent chatbot designed to streamline th
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/yourusername/talentscout-hiring-assistant.git
+   git clone https://github.com/Tushar10987/talentscout-hiring-assistant.git
    cd talentscout-hiring-assistant
    ```
 
